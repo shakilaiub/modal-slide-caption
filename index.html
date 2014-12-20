@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Modal Plagin</title>  
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	
+</head>
+<body>
+<div class="container">
+     <div class="item-details">
+	 <h3>How to show headline, paragraph/description in bootstrap modal title correspond item</h3>
+	 <p><b>Description:</b> In bootstrap modal Generally for a single item, shows in proper "model title". But for multiple item, can't place 
+        correspond items' title in the "modal title". Here created a js function to do that.  	 
+	 </p>
+	 </div>
+	 <div class="row">
+	     <div class="col-md-12">
+		     <div class="btn-group bts">
+				 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+			     Click Here!!!
+			     </button>
+		     </div> 
+			 <div class="btn-group bts">
+				 <button type="button" class="btn btn-default">Download!!!</button>
+			 </div>
+		 </div>
+	 </div>
+</div>    
+<div class="modal fade" id="myModal">
+     <div class="modal-dialog">
+	     <div class="modal-content">
+              <div class="modal-header"> 
+			     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                 <center><h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				 <br/><p class="modal-paragraph" id="myModalLabel">Modal Paragraph</p></center> 
+			  </div>
+			  <div class="modal-body">
+			      <div id = "myCarousel" class = "carousel slide" style="padding-top:0px;">
+				      <div class = "carousel-inner">
+					  
+					     <div class = "item active" align="center">
+	                         <img src = "img/green.png" class = "img-responsive" >
+	                              <div class = "carousel-caption">
+									  <h4>Green Circle</h4>
+									  <p>This is first item. Modal Title test correspond image</p>
+			                      </div>
+		                 </div>
+	
+	                     <div class = "item" align="center">
+	                         <img src = "img/red.png" class = "img-responsive">
+			                      <div class = "carousel-caption">			                         
+									 <h4>Red Circle</h4>
+									 <p>This is second item. Modal Title test correspond image</p>
+			                      </div>
+	                     </div>
+		
+						 <div class = "item" align="center">
+							 <img src = "img/blue.png" class = "img-responsive">
+							      <div class = "carousel-caption">
+									  <h4>Blue Circle</h4>
+									  <p>This is third item. Modal Title test correspond image</p>
+							      </div>
+						 </div>
+					  </div><!--End of carousel-inner-->
+				  </div><!--End of myCarousel-->
+			  </div><!--End of modal body-->
+			  <div class="modal-footer" data-target = "#myCarousel">
+	              <a href = "#myCarousel" data-slide = "prev">
+                     <button class="btn btn-danger pull-left prev" type="button">
+                          <i class="glyphicon glyphicon-chevron-left"></i>
+                            Previous
+                    </button>
+		         </a>
+		         <a href = "#myCarousel" data-slide = "next">
+                     <button class="btn btn-success pull-right next" type="button">
+                              Next
+                          <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+	             </a>
+	         </div><!--End of modal footer-->
+		 </div><!--End of modal content-->	  
+	 </div><!--End of modal dialog-->
+</div><!--End of modal-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	 <script src="js/modal-slide.js"></script>
+</body>
+</html>
